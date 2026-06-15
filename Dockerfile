@@ -8,6 +8,6 @@ RUN pip install --no-cache-dir -e .
 
 EXPOSE 5000
 
-ENV FLASK_APP = application.py 
+ENV FLASK_APP=application.py 
 
 CMD ["python","application.py"]
