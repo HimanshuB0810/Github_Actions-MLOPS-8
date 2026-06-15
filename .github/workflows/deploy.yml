@@ -58,3 +58,4 @@ jobs:
         tags: |
           ${{ secrets.DOCKERHUB_USERNAME }}/iris-species-predictor:latest
           ${{ secrets.DOCKERHUB_USERNAME }}/iris-species-predictor:${{ github.sha }}
+          
