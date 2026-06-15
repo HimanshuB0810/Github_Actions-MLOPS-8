@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Species Prediction App</title>
+
+<base target="_blank">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-icon">🌿</div>
+            <h2>Species Prediction</h2>
+            <p class="subtitle">Iris Classification Model</p>
+        </div>
+
+        <form method="post">
+            <div class="input-group">
+                <label for="SepalLengthCm">Sepal Length</label>
+                <input type="number" step="any" name="SepalLengthCm" id="SepalLengthCm" placeholder="e.g. 5.1" required>
+            </div>
+
+            <div class="input-group">
+                <label for="SepalWidthCm">Sepal Width</label>
+                <input type="number" step="any" name="SepalWidthCm" id="SepalWidthCm" placeholder="e.g. 3.5" required>
+            </div>
+
+            <div class="input-group">
+                <label for="PetalLengthCm">Petal Length</label>
+                <input type="number" step="any" name="PetalLengthCm" id="PetalLengthCm" placeholder="e.g. 1.4" required>
+            </div>
+
+            <div class="input-group">
+                <label for="PetalWidthCm">Petal Width</label>
+                <input type="number" step="any" name="PetalWidthCm" id="PetalWidthCm" placeholder="e.g. 0.2" required>
+            </div>
+
+            <button type="submit">Predict Species</button>
+        </form>
+
+        {% if predication is not none %}
+        <div class="result">
+            <div class="result-label">Predicted Species</div>
+            <div class="result-value">{{ predication }}</div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
